@@ -3,5 +3,12 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+restaurants = Restaurant.create(
+  [{ name: 'McDo' }, { adress: 'Bordeaux' }, { phone_number: 0799471538}, {category: 'french'}],
+  [{ name: 'Sushipalace' }, { adress: 'Talqnce' }, { phone_number: 0799471532}, {category: 'japanese'}],
+  [{ name: 'Santa Lucia' }, { adress: 'Zurich' }, { phone_number: 0799471536}, {category: 'italian'}],
+  [{ name: 'Suan Long' }, { adress: 'Bern' }, { phone_number: 0799471533}, {category: 'chinese'}],
+  [{ name: 'Belge' }, { adress: 'Bruxelles' }, { phone_number: 0799471530}, {category: 'belgian'}]
+  )
+
+  Review.create(content: 'not good', rating: 1, restaurant: restaurants.first)
